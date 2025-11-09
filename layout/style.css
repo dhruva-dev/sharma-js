@@ -1,0 +1,61 @@
+.header {
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header > ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.header > ul > li {
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.main {
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: row;
+}
+
+.sidenav {
+    background-color: pink;
+    width: 200px;
+    height: 500px;
+}
+
+
+.sidenav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+}
+
+.sidenav > ul > li {
+    padding: 10px 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.content {
+    background-color: green;
+    flex-grow: 1;
+}
+
+.footer {
+    height: 100px;
+    background-color: gray;
+}
