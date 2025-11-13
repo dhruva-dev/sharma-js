@@ -1,23 +1,81 @@
 <html>
-    <head>
-        <style>
-            * {
-                box-sizing: border-box;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="z" style="display: flex; flex-direction: column; height: 400px; background-color: yellow;"> 
-            <div style="padding: 20px 20px;background-color: aliceblue; display: flex; justify-content: space-between;">
-                <div style="display: flex; gap: 40px">
-                    <div style="padding: 10px 20px; border: 1px solid grey; border-radius: 40px;">Home</div>
-                    <div style="padding: 10px 20px; border: 1px solid grey; border-radius: 40px;">Contact</div>
-                    <div style="padding: 10px 20px; border: 1px solid grey; border-radius: 40px">Address</div>
-                </div>
-                <div style="display: flex; align-items: center;">User</div>
+
+<head>
+    <script>
+        const myHeaders = new Headers();
+        myHeaders.append("AccountKey", "gDYp8AZuSjCCIs1814cPNg==");
+
+        const requestOptions = {
+            method: "GET",
+            headers: myHeaders,
+            redirect: "follow"
+        };
+
+        fetch("https://datamall2.mytransport.sg/ltaodataservice/v3/BusArrival?BusStopCode=64241&ServiceNo=87", requestOptions)
+            .then((response) => response.text())
+            .then((result) => console.log(result))
+            .catch((error) => console.error(error));
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="z" style="display: flex; flex-direction: column; height: 400px; background-color: yellow;">
+        <div style="padding: 20px 20px;background-color: aliceblue; display: flex; justify-content: space-between;">
+            <div style="display: flex; gap: 40px">
+                <div style="padding: 10px 20px; border: 1px solid grey; border-radius: 40px;">Home</div>
+                <div style="padding: 10px 20px; border: 1px solid grey; border-radius: 40px;">Contact</div>
+                <div style="padding: 10px 20px; border: 1px solid grey; border-radius: 40px">Address</div>
             </div>
-            <div style="flex-grow: 2; background-color: gray;">Content</div>
-            <div style="flex-grow: 1;background-color: lightcoral;">Footer</div>
+            <div style="display: flex; align-items: center;">User</div>
         </div>
-    </body>
+        <div style="flex-grow: 2; background-color: gray;">
+            <div style="display: flex; flex-wrap: wrap; background-color: green; position: relative;">
+                <div style="position: fixed; right: 10px; bottom: 10px; display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; border-radius: 100%; background-color: yellow;">Hello</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+                <div style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 100%; background-color: pink;">Welcome</div>
+            </div>
+        </div>
+        <div style="flex-grow: 1;background-color: lightcoral;">Footer</div>
+    </div>
+</body>
+
 </html>

@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #7bed9f;
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+}
+
+.services {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.services > li {
+    padding: 20px 30px;
+    font-weight: 600;
+}
