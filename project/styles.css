@@ -1,3 +1,18 @@
+body,
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+   text-decoration: none;
+   color: unset; 
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -16,7 +31,38 @@
     padding: 0;
 }
 
-.services > li {
+.services>li {
     padding: 20px 30px;
     font-weight: 600;
+}
+
+.header-menu {
+    position: relative;
+}
+
+.menu-dropdown {
+    position: absolute;
+    top: 58px;
+    display: none;
+    list-style: none;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.menu-dropdown > li {
+    padding: 10px 20px;
+}
+.header-menu:hover {
+    .menu-dropdown {
+        display: block;
+    }
+}
+
+
+/* Arrival Page Styles */
+.main-heading {
+    text-align: center;
 }
