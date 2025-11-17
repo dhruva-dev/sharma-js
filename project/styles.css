@@ -9,8 +9,8 @@ html {
 }
 
 a {
-   text-decoration: none;
-   color: unset; 
+    text-decoration: none;
+    color: unset;
 }
 
 .header {
@@ -52,9 +52,10 @@ a {
     border-radius: 4px;
 }
 
-.menu-dropdown > li {
+.menu-dropdown>li {
     padding: 10px 20px;
 }
+
 .header-menu:hover {
     .menu-dropdown {
         display: block;
@@ -65,4 +66,38 @@ a {
 /* Arrival Page Styles */
 .main-heading {
     text-align: center;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+#bus-status {
+    display: none;
+}
+
+.bus_stop {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.service_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.arrival_main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }

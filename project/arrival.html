@@ -1,7 +1,6 @@
 <html>
 
 <head>
-    <script src="./script.js"></script>
     <link rel="stylesheet" href="./styles.css" />
 </head>
 
@@ -27,8 +26,20 @@
 
     <h1 class="main-heading">Arrival Status</h1>
 
-    
+    <form action="/project/arrival.html">
+        <div>
+            <label for="BusStopCode">Enter Bus stop code</label>
+            <input id="BusStopCode" name="BusStopCode" />
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
 
+    <div id="busstop">
+    </div>
+
+    <script src="./arrival.js"></script>
 </body>
 
 </html>
