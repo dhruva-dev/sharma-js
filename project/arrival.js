@@ -19,26 +19,25 @@ fetch(`http://localhost:3000/ltaodataservice/v3/BusArrival?BusStopCode=${busstop
             h5.innerText = 'Service No: ' + service.ServiceNo;
             div.appendChild(h5);
             const keys = Object.keys(service);
-                                const table = document.createElement('table');
+            const table = document.createElement('table');
+            const htr = document.createElement('tr');
+            const thBusCode = document.createElement('td');
+            thBusCode.innerText = 'Bus name';
+            htr.appendChild(thBusCode);
+            const thArrival = document.createElement('td');
+            thArrival.innerText = 'Arrival';
+            htr.appendChild(thArrival);
+            const thOriginCode = document.createElement('td');
+            thOriginCode.innerHTML = 'Origin Code';
+            htr.appendChild(thOriginCode);
+            const thDestinationCode = document.createElement('td');
+            thDestinationCode.innerText = 'Destination code';
+            htr.appendChild(thDestinationCode);
+            table.appendChild(htr);
             for (let i = 0; i < keys.length; i = i + 1) {
                 const busData = service[keys[i]];
                 if (busData && busData.OriginCode) {
-                    const htr = document.createElement('tr');
-                    const thBusCode = document.createElement('td');
-                    thBusCode.innerText = 'Bus name';
-                    htr.appendChild(thBusCode);
-                    const thArrival = document.createElement('td');
-                    thArrival.innerText = 'Arrival';
-                    htr.appendChild(thArrival);
-                    const thOriginCode = document.createElement('td');
-                    thOriginCode.innerHTML = 'Origin Code';
-                    htr.appendChild(thOriginCode);
 
-                    const thDestinationCode = document.createElement('td');
-                    thDestinationCode.innerText = 'Destination code';
-                    htr.appendChild(thDestinationCode);
-
-                    table.appendChild(htr);
                     const tr = document.createElement('tr');
                     const tdBusCode = document.createElement('td');
                     tdBusCode.innerText = keys[i];
