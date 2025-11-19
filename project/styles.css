@@ -1,11 +1,32 @@
-body,
-html {
-    margin: 0px;
-    padding: 0px;
+/* Icons */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
 
 * {
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 a {
@@ -74,6 +95,11 @@ td {
     border: 1px solid black;
 }
 
+.content {
+    background-color: #f6f3f4;
+    padding: 50px;
+}
+
 #bus-status {
     display: none;
 }
@@ -101,3 +127,36 @@ td {
     align-items: center;
     flex-direction: column;
 }
+
+#busstop {
+    display: flex;
+    justify-content: center;
+}
+
+.busstop_card {
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    background-color: white;
+}
+
+.busstop_info {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 24px 16px 24px;
+}
+
+.busstop_bus_details {
+    padding: 0 24px 24px 24px;
+}
+
+.busstop_info>.address {
+    color: #4a5565;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.busstop_info>.fav {}
+
+.busstop_bus_details>table {}
