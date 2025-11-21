@@ -20,7 +20,35 @@ fetch(`http://localhost:3000/ltaodataservice/v3/BusArrival?BusStopCode=${busstop
         address.innerText = 'Bus Stop: ' + result.BusStopCode;
         const favIcon = document.createElement('span');
         favIcon.classList.add('material-symbols-outlined');
+        let bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+        for (let i = 0; i < bookmarks.length; i = i + 1) {
+            if (bookmarks[i] === busstopcode) {
+                favIcon.style.color = 'pink';
+                break;
+            }
+        }
         favIcon.innerText = 'favorite';
+        favIcon.addEventListener('click', function () {
+            debugger;
+            let bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+            if (bookmarks === null) {
+                bookmarks = [];
+            }
+            let bookmarkExist = false;
+            for (let i = 0; i < bookmarks.length; i = i + 1) {
+                if (bookmarks[i] === busstopcode) {
+                    bookmarkExist = true;
+                    bookmarks.splice(i, 1);
+                    favIcon.style.color = 'black';
+                    break;
+                }
+            }
+            if (!bookmarkExist) {
+                bookmarks.push(busstopcode);
+                favIcon.style.color = 'pink';
+            }
+            localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+        })
         busStopInfo.appendChild(address);
         busStopInfo.appendChild(favIcon);
         busStopCard.appendChild(busStopInfo);
@@ -55,7 +83,7 @@ fetch(`http://localhost:3000/ltaodataservice/v3/BusArrival?BusStopCode=${busstop
             if (service.NextBus.EstimatedArrival) {
                 const nextbusDateInMilliSec = new Date(service.NextBus.EstimatedArrival);
                 const diff = nextbusDateInMilliSec - cuurentDateInMilisec;
-                if (diff < 1) {
+                if (diff < 1000) {
                     nexttd.innerText = 'Arriving';
                 } else {
                     const minutes = diff / 60000;
@@ -68,7 +96,7 @@ fetch(`http://localhost:3000/ltaodataservice/v3/BusArrival?BusStopCode=${busstop
             if (service.NextBus2.EstimatedArrival) {
                 const subseqbusDateInMilliSec = new Date(service.NextBus2.EstimatedArrival);
                 const diff1 = subseqbusDateInMilliSec - cuurentDateInMilisec;
-                if (diff1 < 1) {
+                if (diff1 < 1000) {
                     subseqtd.innerText = 'Arriving';
                 } else {
                     const minutes1 = diff1 / 60000;

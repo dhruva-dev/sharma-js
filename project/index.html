@@ -1,8 +1,13 @@
 <html>
 
 <head>
-    <script src="./script.js"></script>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -11,19 +16,32 @@
         <ul class="services">
             <li class="header-menu">Bus Services
                 <ul class="menu-dropdown">
-                    <li><a href="./arrival.html">Arrival</a></li>
-                    <li><a href="./arrival.html">Arrival</a></li>
-                </ul>
-            </li>
-            <li class="header-menu">Complaint
-                <ul class="menu-dropdown">
-                    <li><a href="./arrival.html">Arrival</a></li>
-                    <li><a href="./arrival.html">Arrival</a></li>
+                    <li><a href="./index.html">Bus Arrival</a></li>
+                    <li><a href="./passenger-volume.html">Passenger Volume</a></li>
                 </ul>
             </li>
             <li>Helpline</li>
         </ul>
     </header>
+
+    <div class="content">
+        <h1 class="main-heading">TrackMyBus</h1>
+
+        <div class="busstop_form_card">
+            <form action="/project/index.html" class="busstopform">
+                <input id="BusStopCode" name="BusStopCode" />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+
+        <div id="busstop">
+        </div>
+    </div>
+
+
+
+    <script src="./arrival.js"></script>
 </body>
 
 </html>
