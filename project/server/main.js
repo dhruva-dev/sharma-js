@@ -26,7 +26,7 @@ const server = http.createServer((req, res) => {
                 });
                 res.end(JSON.stringify(data));
             } catch (err) {
-                res.writeHead(200, {
+                res.writeHead(500, {
                     "Content-Type": "application/json"
                 });
                 res.end(JSON.stringify(err));
